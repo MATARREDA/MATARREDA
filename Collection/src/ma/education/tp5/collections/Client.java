@@ -1,7 +1,7 @@
 package ma.education.tp5.collections;
-import java.util.Comparator;
+// import java.util.Comparator;
 	
-public class Client implements Comparable{
+public class Client{
 //		Integer code;
 //		String name;
 //		public Client(Integer code, String name) {
@@ -59,7 +59,6 @@ public class Client implements Comparable{
 	", name='" + name + '\'' +
 	'}';
 	}
-	@Override
 	public int compareTo(Object o) {
 		// TODO Auto-generated method stub
 		return 0;
