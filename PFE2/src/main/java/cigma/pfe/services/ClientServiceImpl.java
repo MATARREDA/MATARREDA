@@ -7,15 +7,17 @@ import cigma.pfe.repositories.ClientRepository;
 //import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ClientServiceImpl implements ClientService{
-	ClientRepository ClientRepository;
+	ClientRepository clientRepository;
+	
 	public void setClientRepository(ClientRepository ClientRepository) {
-		this.ClientRepository = ClientRepository;
+		this.clientRepository = ClientRepository;
 	}
+	
 	//ClientRepository clientRepository = new ClientRepositoryImpl();
 	@Override
 	public Client save(Client c) {
 	System.out.println("Service Layer : ClientServiceImpl Level... ");
-	return ClientRepository.save(c);
+	return clientRepository.save(c);
 	}
 	
 

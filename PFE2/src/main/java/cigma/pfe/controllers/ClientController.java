@@ -7,26 +7,29 @@ import cigma.pfe.services.ClientService;
 //import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ClientController {
-	
-		ClientService clientService;
-		public void setClientService(ClientService clientService) {
+
+	ClientService clientService;
+
+	public ClientController(ClientService clientService) {
+		this.clientService = clientService;
+	}
+
+	public void setClientService(ClientService clientService) {
 		this.clientService = clientService;
 		System.out.println("Call ClientController with clientService param....");
-		
-		}
 
-	//ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-	//ClientService clientService = (ClientService) new ClientServiceImpl();
-	public Client save(Client c ){
-	System.out.println("ClientController level...");
-	return clientService.save(c);
 	}
+
+	// ApplicationContext context = new
+	// ClassPathXmlApplicationContext("spring.xml");
+	// ClientService clientService = (ClientService) new ClientServiceImpl();
+	public Client save(Client c) {
+		System.out.println("ClientController level...");
+		return clientService.save(c);
+	}
+
 	public ClientController() {
 		System.out.println("Call ClientController ....");
-		}
-	 public void ClientServiceImpl() {
-		 System.out.println("Call ClientServiceImpl ....");
-				 }
+	}
 
-	 }
-
+}
